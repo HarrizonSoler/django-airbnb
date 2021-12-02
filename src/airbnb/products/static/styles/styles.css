@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav&display=swap');
+body {
+    background-color: white;
+    margin: 0;
+}
+
+.wide_image_container {
+    background-image: url("../img/header_landscape.webp");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 3em;
+    font-family: 'Yantra', sans-serif;
+    padding: 1rem 0;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    width: 8rem;
+}
+
+.center_menu {
+    height: 100%;
+    display: flex;
+}
+
+.center_menu a:link,
+.center_menu a:visited {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.center_menu a:hover,
+.center_menu a:active {
+    color: #ddd;
+    transition: all .3s;
+}
+
+.right_menu {
+    height: 100%;
+    display: flex;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.button:link,
+.button:visited {
+    display: flex;
+    padding: 0.8rem;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-color: transparent;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.button:hover,
+.button:active {
+    background-color: rgba(255, 255, 255, 0.15);
+    ;
+    transition: all .2s;
+}
+
+.language {
+    position: relative;
+    right: 0.2rem;
+}
+
+.user_menu {
+    display: flex;
+    margin: 0 0.5rem;
+    background-color: white;
+    border: solid 1px #ddd;
+    padding: 0.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.start_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50em;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.button_container:visited,
+.button_container:link {
+    background-color: white;
+    padding: 0.3em 3em;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 5px 10px 18px #888888;
+    transition: .2s;
+}
+
+.button_container:hover,
+.button_container:active {
+    box-shadow: 0px 0px 5px #888888;
+    transition: all .2s;
+}
+
+.start_container .button_container h3 {
+    font-size: 1.2em;
+    background: linear-gradient(to right, #ff8a00 0%, #dd4c4f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cities {
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.cities_container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1em;
+    margin-bottom: 4em;
+}
+
+.city {
+    flex-grow: 1;
+    border-radius: 20px;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+}
+
+.city figure {
+    margin: 0;
+}
+
+.city img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.city_info {
+    height: 10em;
+    padding: 0.5em 1.5em;
+}
+
+.city_info h3 {
+    font-size: 1.7em;
+}
+
+.city_info p {
+    font-size: 1.2em;
+}
+
+.city_info h3,
+.city_info p {
+    margin: 0 0 0.2em 0;
+}
+
+.city:first-child {
+    background-color: #DE3151;
+}
+
+.city:nth-of-type(2) {
+    background-color: #CC2D4A;
+}
+
+.city:nth-of-type(3) {
+    background-color: #BC1A6E;
+}
+
+.city:last-child {
+    background-color: #D93B30;
+}

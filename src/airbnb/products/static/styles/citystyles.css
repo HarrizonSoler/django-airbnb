@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.container {
+	width: 90%;
+	max-width: 1800px;
+	margin: 0 auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	height: 3em;
+	font-family: 'Yantra', sans-serif;
+	padding: 1rem 0;
+}
+
+header .logo {
+	display: flex;
+	justify-content: center;
+	width: 8rem;
+}
+
+.right_menu {
+	height: 100%;
+	display: flex;
+	font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+	.button:link, .button:visited {
+		display: flex;
+		padding: 0.8rem;
+		justify-content: center;
+		flex-direction: column;
+		color: black;
+		background-color: transparent;
+		border-radius: 20px;
+		text-decoration: none;
+	}
+
+	.button:hover, .button:active {
+		background-color: rgba(0, 0, 0, 0.15);;
+		transition: all .2s;
+	}
+
+	.language {
+		position: relative;
+		right: 0.2rem;
+	}
+
+	.user_menu {
+		display: flex;
+		margin: 0 0.5rem;
+		background-color: white;
+		border: solid 1px #ddd;
+		padding: 0.5rem;
+		border-radius: 20px;
+		text-decoration: none;
+	}
+
+main {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	margin: 0;
+}
+
+.stays {
+	flex-grow: 3;
+}
+
+.map {
+	flex-grow: 2;
+}
