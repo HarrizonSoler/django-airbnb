@@ -1,31 +1,23 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+#from products.models import City
 
-# Create your models here.
-class City(models.Model):
-    name = CharField(max_length = 200)
-    state = models.ForeignKey(State, on_delete = models.CASCADE)
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    #city = models.ForeignKey(City, on_delete = models.SET_NULL, null = True)
+    profile_picture = models.FileField(upload_to = "profile")
 
-    def __str__(self):
-        return self.name
+    # Python 3
+    def __str__(self): 
+        return self.user.username
 
-class State(models.Model):
-    name = models.CharField(max_length = 150)
-    country = models.ForeignKey(Country, on_delete = models.CASCADE)
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
 
-    def __str__(self):
-        return self.name
-
-class Country(models.Model):
-    name = models.CharField(max_length = 120)
-
-    def __str__(self):
-        return self.name
-
-class Stay(models.Model):
-    host =
-
-class Account(models.Model):
-    name = CharField(max_length = 170)
-    email = EmailField(max_lenght = 200)
-    city = models.ForeignKey(City, on_delete = models.SET_NULL, null = True)
-    profile_picture = FileField(upload_to = "")
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
